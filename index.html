@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --primary-color: #886452;
+        --secondary-color: #fff;
+        --accent-color: #d97742;
+      }
+
+      body {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+      }
+
+      .navbar {
+        background-color: var(--primary-color) !important;
+      }
+
+      .navbar .nav-link {
+        color: var(--secondary-color) !important;
+      }
+
+      .navbar .nav-link:hover {
+        color: var(--accent-color) !important;
+      }
+
+      .hero {
+        background-color: var(--secondary-color);
+        text-align: center;
+        padding: 4rem 1rem 1rem 1rem;
+      }
+
+      .hero img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 1rem;
+        background-position: top center;
+      }
+
+      .hero h1 {
+        color: var(--primary-color);
+      }
+
+      .hero p {
+        color: var(--primary-color);
+      }
+
+      .btn-primary {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+
+      .btn-primary:hover {
+        background-color: #c06530;
+        border-color: #c06530;
+      }
+
+      .table-light {
+        background-color: var(--secondary-color);
+      }
+
+      .table {
+        color: var(--primary-color);
+      }
+
+      .table-bordered {
+        border-color: #886452;
+      }
+
+      .table thead {
+        background-color: #886452;
+        color: white;
+        border: 1px solid var(--primary-color);
+      }
+
+      .table tbody tr {
+        border-bottom: 2px solid #886452;
+      }
+
+      .table {
+        background-color: #ede6db;
+      }
+
+      .table td,
+      .table th {
+        background-color: #ede6db;
+        color: #000;
+      }
+
+      .table thead th {
+        background-color: #d97742;
+        color: white;
+      }
+
+      .table tbody tr:hover {
+        background-color: rgba(217, 119, 66, 0.2);
+      }
+
+      .card {
+        background-color: var(--secondary-color);
+        border: none;
+      }
+
+      .card-title {
+        color: var(--primary-color);
+      }
+
+      .card-text {
+        color: var(--primary-color);
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(100%);
+      }
+
+      .card {
+        border: 3px solid #886452;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #ede6db;
+      }
+
+      #contact {
+        background-color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <button
+          class="navbar-toggler d-sm-none mx-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero">
+        <img
+          src="assets/Profile-Picture0.JPG"
+          alt="Mark Achiles G. Flores Jr."
+        />
+        <h1>Mark Achiles G. Flores Jr.</h1>
+        <p>
+          Cloud Developer, Educator, and AWS Community Leader passionate about
+          tech, learning, and innovation.
+        </p>
+      </section>
+
+      <section id="about" class="container py-5">
+        <h2 class="text-center mb-4">About Me</h2>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h4>Introduction</h4>
+            <p>
+              I'm Mark, a cloud developer and tech educator passionate about
+              innovation and empowering others through technology.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4>Achievements</h4>
+            <ul class="list-unstyled">
+              <li>AWS Certified Cloud Practitioner</li>
+              <li>AWS Certified Developer - Associate</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Personal Interests</h4>
+            <p>
+              Beyond tech, I enjoy public speaking, mentoring, and continuously
+              learning about emerging cloud technologies.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h3 class="text-center">Education & Work Experience</h3>
+          <div class="table-responsive">
+            <table class="table table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>Institution/Company</th>
+                  <th>Degree/Position</th>
+                  <th>Years Attended/Employed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Polytechnic University of the Philippines</td>
+                  <td>Bachelor of Science in Computer Science</td>
+                  <td>2022 - Present</td>
+                </tr>
+                <tr>
+                  <td>AWS Cloud Club PUP</td>
+                  <td>Captain</td>
+                  <td>2024 - Present</td>
+                </tr>
+                <tr>
+                  <td>AWS Cloud Club Philippines</td>
+                  <td>Technology Director</td>
+                  <td>2024 - Present</td>
+                </tr>
+                <tr>
+                  <td>Tutorials Dojo</td>
+                  <td>Cloud Developer Intern</td>
+                  <td>2024 - 2025</td>
+                </tr>
+                <tr>
+                  <td>AWS Cloud Club - PUP Manila</td>
+                  <td>Co-Captain</td>
+                  <td>2023 - 2024</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container py-5">
+        <h2 class="text-center mb-4">Projects</h2>
+        <div
+          id="projectsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card text-center mx-auto" style="width: 18rem">
+                <img
+                  src="assets/OptiMax.png"
+                  class="card-img-top"
+                  alt="Project 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">OptiMax</h5>
+                  <p class="card-text">
+                    OptiMax is a web application that helps you manage your
+                    budget using the knapsack problem, and the branch and bound
+                    algorithm.
+                  </p>
+                  <a
+                    href="https://github.com/MachiBytes/optimax"
+                    class="btn btn-primary"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card text-center mx-auto" style="width: 18rem">
+                <img
+                  src="assets/Data-Structures-Toolkit.png"
+                  class="card-img-top"
+                  alt="Project 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Structures Toolkit</h5>
+                  <p class="card-text">
+                    This is a web application made with pure JavaScript to help
+                    visualize the operations of different data structures.
+                  </p>
+                  <a
+                    href="https://github.com/MachiBytes/Data-Structures-Toolkit"
+                    class="btn btn-primary"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card text-center mx-auto" style="width: 18rem">
+                <img
+                  src="assets/TenantFlow.png"
+                  class="card-img-top"
+                  alt="Project 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Tenantflow</h5>
+                  <p class="card-text">
+                    Tenant is a rental application manager designed to simplify
+                    and automate the processing of tenant application in an
+                    apartment.
+                  </p>
+                  <a
+                    href="https://github.com/MachiBytes/tenantflow"
+                    class="btn btn-primary"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev d-flex align-items-center"
+            type="button"
+            data-bs-target="#projectsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next d-flex align-items-center"
+            type="button"
+            data-bs-target="#projectsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <section id="skills" class="container py-5">
+        <h2 class="text-center mb-4">My Skills</h2>
+        <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+                width="50"
+              />
+              <h5 class="mt-2">Python</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                alt="AWS"
+                width="50"
+              />
+              <h5 class="mt-2">AWS</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                alt="Docker"
+                width="50"
+              />
+              <h5 class="mt-2">Docker</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+                width="50"
+              />
+              <h5 class="mt-2">JavaScript</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                alt="Laravel"
+                width="50"
+              />
+              <h5 class="mt-2">Laravel</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                alt="Flask"
+                width="50"
+              />
+              <h5 class="mt-2">Flask</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL"
+                width="50"
+              />
+              <h5 class="mt-2">PostgreSQL</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card h-100 d-flex flex-column align-items-center justify-content-center p-3"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git"
+                width="50"
+              />
+              <h5 class="mt-2">Git</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="text-light py-4">
+        <div class="container text-center">
+          <h4>Contact Me</h4>
+          <p>
+            Email:
+            <a href="mailto:markachilesflores2004@gmail.com" class="text-light"
+              >markachilesflores2004@gmail.com</a
+            >
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a
+              href="https://facebook.com/aki9716"
+              target="_blank"
+              class="text-light"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+                width="30"
+                alt="Facebook"
+              />
+            </a>
+            <a
+              href="https://linkedin.com/in/aki9716"
+              target="_blank"
+              class="text-light"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                width="30"
+                alt="LinkedIn"
+              />
+            </a>
+            <a
+              href="https://github.com/MachiBytes"
+              target="_blank"
+              class="text-light"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                width="30"
+                alt="GitHub"
+              />
+            </a>
+          </div>
+          <p class="mt-3">&copy; 2025 Mark Achiles G. Flores Jr.</p>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
